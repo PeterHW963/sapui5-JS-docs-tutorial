@@ -1,6 +1,17 @@
 {
     "_version": "1.65.0",
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+	    }
+    },
     "sap.app": {
-        "id": "ui5.walkthrough"
+        "id": "ui5.walkthrough",
+        "type": "application",
+        "title": "SAPUI5-JS-DOCS-TUTORIAL",
+        "applicationVersion": {"version": "1.0.0"}
     }
 }
