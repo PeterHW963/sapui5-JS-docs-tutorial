@@ -2,6 +2,7 @@ controller, view, and i18n are convention names.
 
 *.view.xml is the convention for view.
 *.controller.js is the convention for controllers.
+Component.js is the convention for component. Is there only 1 component per app???
 
 capitalisation conventions:
 Controller names are capitalized
