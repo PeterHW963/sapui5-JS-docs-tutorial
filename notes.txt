@@ -10,3 +10,5 @@ View names are capitalized
 Resource bundle keys are written in (lower) camelCase
 
 manifest.json is the application's descriptor file
+
+SAPUI5 has its own predefined CSS classes
