@@ -1,0 +1,9 @@
+controller, view, and i18n are convention names.
+
+*.view.xml is the convention for view.
+*.controller.js is the convention for controllers.
+
+capitalisation conventions:
+Controller names are capitalized
+View names are capitalized
+Resource bundle keys are written in (lower) camelCase
