@@ -8,3 +8,5 @@ capitalisation conventions:
 Controller names are capitalized
 View names are capitalized
 Resource bundle keys are written in (lower) camelCase
+
+manifest.json is the application's descriptor file
