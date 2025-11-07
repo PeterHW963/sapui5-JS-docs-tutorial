@@ -11,4 +11,4 @@ Resource bundle keys are written in (lower) camelCase
 
 manifest.json is the application's descriptor file
 
-SAPUI5 has its own predefined CSS classes
+SAPUI5 has its own predefined CSS classes, check this https://sapui5.hana.ondemand.com/#/topic/ea08f53503da42c19afd342f4b0c9ec7 

@@ -5,7 +5,7 @@
     displayBlock="true">
     <!-- we don't add Shell control to XML view if apps run in external shell, such as Fiori Launchpad that alr has a shell around the component UI -->
     <Shell>
-        <App>
+        <App class="myAppDemoWT"> <!-- we add this class just to make sure the css selector that has .myAppDemoWT is only used by this app -->
             <pages>
                 <Page title="{i18n>homePageTitle}">
                     <content>
@@ -17,14 +17,14 @@
                                 <Button 
                                     text="{i18n>showHelloButtonText}" 
                                     press=".onShowHello"
-                                    class="sapUiSmallMarginEnd"/>
+                                    class="myCustomButton"/>
                                 <Input 
                                     value="{/recipient/name}"
                                     valueLiveUpdate="true"
                                     width="70%"/>
-                                <Text
-                                    text="Hello {/recipient/name}"
-                                    class="sapUiSmallMargin"/>
+                                <FormattedText
+                                    htmlText="Hello {/recipient/name}"
+                                    class="sapUiSmallMargin myCustomText sapThemeHighlight-asColor"/>
                             </content>
                         </Panel>
                     </content>
