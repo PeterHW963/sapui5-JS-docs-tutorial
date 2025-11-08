@@ -21,6 +21,12 @@ sap.ui.define([
                 name: "ui5.walkthrough.view.HelloDialog"
             });
             this.oDialog.open();
+        },
+
+        onCloseDialog() {
+            // this fn doesn't need tobe chained to the oDialog promise.
+            // because this event handler is only called from within loaded dialog.
+            this.byId("helloDialog").close();
         }
     });
 });
