@@ -12,6 +12,15 @@ sap.ui.define([
 
             // show message
             MessageToast.show(sMsg);
+        },
+
+        async onOpenDialog() {
+            // create dialog lazily. 
+            // ??= is Nullish Coalescing Assignment op - assign value to a var only if the var's current value is null or undefined
+            this.oDialog ??= await this.loadFragment({
+                name: "ui5.walkthrough.view.HelloDialog"
+            });
+            this.oDialog.open();
         }
     });
 });
