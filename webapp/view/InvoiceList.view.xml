@@ -25,8 +25,21 @@
                     }
                 }"
                 numberUnit="{view>/currency}"
-                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"/>
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}">
                 <!-- a model binding inside expression binding needs to be escaped with $ -->
+                <firstStatus>
+                    <ObjectStatus 
+                        core:require="{
+                            Formatter: 'ui5/walkthrough/model/formatter'
+                        }"
+                        text="{
+                            path: 'invoice>Status',
+                            formatter: 'Formatter.statusText.bind($controller)'
+                        }"
+                        />
+                        <!-- .bind($controller) means we bind the this context to be set to current view's controller's context -->
+                </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>
