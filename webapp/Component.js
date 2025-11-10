@@ -24,6 +24,9 @@ sap.ui.define([
             };
             const oModel = new JSONModel(oData);
             this.setModel(oModel);
+
+            // create views based on url
+            this.getRouter().initialize();
         }
     })
 })
