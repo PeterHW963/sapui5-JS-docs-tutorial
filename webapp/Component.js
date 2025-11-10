@@ -2,7 +2,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
-], (UIComponent, JSONModel) => {
+    "sap/ui/Device"
+], (UIComponent, JSONModel, Device) => {
     "use strict";
     return UIComponent.extend("ui5.walkthrough.Component", {
         // metadata section
@@ -24,6 +25,12 @@ sap.ui.define([
             };
             const oModel = new JSONModel(oData);
             this.setModel(oModel);
+
+            // set device model
+            const oDeviceModel = new JSONModel(Device);
+            oDeviceModel.setDefaultBindingMode("OneWay"); // best to set OneWay cus device model is read-only, but by default it's TwoWay
+            // which lets us databind to change the model
+            this.setModel(oDeviceModel, "device");
 
             // create views based on url
             this.getRouter().initialize();
