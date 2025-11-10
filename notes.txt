@@ -14,5 +14,9 @@ manifest.json is the application's descriptor file
 SAPUI5 has its own predefined CSS classes, check this https://sapui5.hana.ondemand.com/#/topic/ea08f53503da42c19afd342f4b0c9ec7 
 
 Run this npm i -D ui5-middleware-simpleproxy for mocking
+Run npm i -D local-web-server for serving built files
 
 To open debug tools: Ctrl + Shift + Alt + s
+
+run built file using
+npm run serve-dist and don't forget to append /test/mockServer.html to the end of the URL
